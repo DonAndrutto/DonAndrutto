@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @DonAndrutto
 - 👀 I’m interested in philosophy and vajrayana buddhism
-- 🌱 I’m currently learning how to create models that learn translation 
+- 🌱 I’m currently learning how to create models that learn translation and create Sadhana reader apps
 - 💞️ I’m looking to collaborate on tibetan translations
 - 📫 How to reach me @ rybszlegerr@gmail.com
 
