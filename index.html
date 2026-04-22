@@ -120,7 +120,7 @@
       align-items: center;
       gap: 1rem;
       max-width: 700px;
-      margin: 0 auto 3rem;
+      margin: 0.5rem auto 0.5rem;
       padding: 0 2rem;
       opacity: 0;
       animation: fadeUp 0.8s ease forwards 0.65s;
@@ -149,7 +149,8 @@
       letter-spacing: 0.3em;
       text-transform: uppercase;
       color: var(--muted);
-      margin-bottom: 2rem;
+      margin-bottom: 0.8rem;
+      margin-top: 0.5rem;
       opacity: 0;
       animation: fadeUp 0.8s ease forwards 0.7s;
     }
@@ -163,7 +164,7 @@
       gap: 1.5rem;
       max-width: 1100px;
       margin: 0 auto;
-      padding: 0 2rem 5rem;
+      padding: 0 2rem 1rem;
     }
 
     /* ── App card ── */
@@ -310,7 +311,7 @@
 
 </div>
 
-<div class="divider" style="margin-top:2rem;"><span class="divider-symbol">❧</span></div>
+<div class="divider"><span class="divider-symbol">❧</span></div>
 <p class="section-label">Sādhana</p>
 <div class="grid">
 
@@ -337,7 +338,7 @@
 
 </div>
 
-<div class="divider" style="margin-top:2rem;"><span class="divider-symbol">❧</span></div>
+<div class="divider"><span class="divider-symbol">❧</span></div>
 <p class="section-label">Prayers</p>
 <div class="grid">
 
@@ -350,16 +351,19 @@
 
 </div>
 
-<div class="divider" style="margin-top:2rem;"><span class="divider-symbol">❧</span></div>
+<div class="divider"><span class="divider-symbol">❧</span></div>
 <p class="section-label">Study Aid</p>
 <div class="grid">
 
-  <a class="card" href="https://lama-gongdu-cycle-930326859786.us-west1.run.app" target="_blank" rel="noopener">
+  <div class="card" style="cursor:default;" onmouseenter="this.style.transform='translateY(-3px)';this.style.boxShadow='0 12px 40px rgba(26,20,16,0.1)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
     <span class="card-tag">Study Aid</span>
     <span class="card-title">Lama Gongdu</span>
-    <span class="card-desc">A visualization of the structure of the Lama Gongdu cycle revealed by Sangye Lingpa. Contains Dream Yoga instructions recently rendered into English. <a href="https://taplink.cc/yeshekhorlo" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="color:var(--accent);text-decoration:underline;">Purchase</a></span>
-    <span class="card-arrow">Open app →</span>
-  </a>
+    <span class="card-desc">A visualization of the structure of the Lama Gongdu cycle revealed by Sangye Lingpa. Contains Dream Yoga instructions recently rendered into English.</span>
+    <div style="display:flex;gap:1.2rem;margin-top:0.8rem;align-items:center;">
+      <a href="https://lama-gongdu-cycle-930326859786.us-west1.run.app" target="_blank" rel="noopener" style="color:var(--gold);font-size:0.8rem;letter-spacing:0.1em;text-decoration:none;">Open app →</a>
+      <a href="https://taplink.cc/yeshekhorlo" target="_blank" rel="noopener" style="color:var(--accent);font-size:0.8rem;letter-spacing:0.1em;text-decoration:underline;">Purchase</a>
+    </div>
+  </div>
 
   <a class="card" href="https://donandrutto.github.io/Yontendzo/" target="_blank" rel="noopener">
     <span class="card-tag">Study Aid</span>
