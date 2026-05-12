@@ -274,10 +274,116 @@
       to   { opacity: 1; transform: translateY(0); }
     }
 
+    /* ── Experiments section ── */
+    .experiments-wrapper {
+      position: relative;
+      z-index: 1;
+      max-width: 1100px;
+      margin: 2rem auto 0;
+      padding: 0 2rem;
+    }
+
+    .experiments-toggle {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      cursor: pointer;
+      list-style: none;
+      width: fit-content;
+      margin: 0 auto;
+      padding: 0.4rem 0;
+      opacity: 0.38;
+      transition: opacity 0.3s ease;
+    }
+
+    .experiments-toggle:hover { opacity: 0.65; }
+
+    .experiments-toggle .exp-label {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 300;
+      font-size: 0.62rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .experiments-toggle .exp-chevron {
+      font-size: 0.55rem;
+      color: var(--muted);
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+
+    details[open] .experiments-toggle .exp-chevron {
+      transform: rotate(90deg);
+    }
+
+    .experiments-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.2rem;
+      margin-top: 1rem;
+      overflow: hidden;
+    }
+
+    .exp-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      padding: 1.4rem 1.5rem 1.2rem;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      position: relative;
+      overflow: hidden;
+      opacity: 0.75;
+    }
+
+    .exp-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 3px;
+      height: 0;
+      background: var(--muted);
+      transition: height 0.3s ease;
+    }
+
+    .exp-card:hover::before { height: 100%; }
+
+    .exp-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(26,20,16,0.07);
+      border-color: rgba(107,94,82,0.3);
+      opacity: 1;
+    }
+
+    .exp-card .card-tag {
+      color: var(--muted);
+      font-size: 0.6rem;
+    }
+
+    .exp-card .card-title {
+      font-size: 1.1rem;
+      color: var(--ink);
+    }
+
+    .exp-card .card-desc {
+      font-size: 0.85rem;
+    }
+
+    .exp-card .card-arrow {
+      color: var(--muted);
+    }
+
     /* ── Responsive ── */
     @media (max-width: 500px) {
       header { padding: 3rem 1.5rem 2rem; }
       .grid { grid-template-columns: 1fr; }
+      .experiments-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -372,6 +478,23 @@
     <span class="card-arrow">Open app →</span>
   </a>
 
+</div>
+
+<div class="experiments-wrapper">
+  <details>
+    <summary class="experiments-toggle">
+      <span class="exp-chevron">▶</span>
+      <span class="exp-label">Experiments</span>
+    </summary>
+    <div class="experiments-grid">
+      <a class="exp-card" href="https://narrative-hypergraph-825982397823.us-west1.run.app/" target="_blank" rel="noopener">
+        <span class="card-tag">Experiment</span>
+        <span class="card-title">Narrator: Unreliable</span>
+        <span class="card-desc">An experimental narrative interface.</span>
+        <span class="card-arrow">Open →</span>
+      </a>
+    </div>
+  </details>
 </div>
 
 <footer>
